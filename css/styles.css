@@ -9,6 +9,7 @@
   --primary-text-color: #757575;
   --secondary-text-color: #212121;
   --accent-color: #2196f3;
+  --primary-icon-color: #afb1b8;
   --primary-footer-head-color: #2f303a;
   --primary-team-color: #f5f4fa;
   --primary-black-color: #000000;
@@ -77,10 +78,49 @@ body {
   align-items: center;
 }
 
+.contakt-link {
+  display: flex;
+  align-items: center;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+}
+
+.contakt-link:hover,
+.contakt-link:focus {
+  color: var(--accent-color);
+}
+
+.contakt-link:hover .contakct-icon,
+.contakt-link:focus .contakct-icon {
+  fill: var(--accent-color);
+}
+
+.nav-link,
+.contakt-link {
+  padding: 32px 0px;
+}
+
 .contakt-list {
   display: flex;
   align-items: center;
   margin-left: auto;
+}
+.contakct-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.logo-mail {
+  width: 16px;
+  height: 12px;
+}
+.logo-tel {
+  width: 10px;
+  height: 16px;
 }
 
 .nav-list-item:not(:last-child),
@@ -123,38 +163,6 @@ body {
   letter-spacing: 0.02em;
 }
 
-.contakt-link-mail {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.143;
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color);
-}
-
-.contakt-link-mail:hover,
-.contakt-link-mail:focus {
-  color: var(--accent-color);
-}
-
-.contakt-link-tel {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.143;
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color);
-}
-
-.contakt-link-tel:hover,
-.contakt-link-tel:focus {
-  color: var(--accent-color);
-}
-
-.nav-link,
-.contakt-link-mail,
-.contakt-link-tel {
-  padding: 32px 0px;
-}
-
 /* горизонтальна лінія */
 .header {
   border-bottom: 1px solid #ececec;
@@ -164,9 +172,17 @@ body {
 /* =====Hero===== */
 
 .hero {
-  background-color: var(--primary-footer-head-color);
+  /* background-color: var(--primary-footer-head-color); */
   text-align: center;
   padding: 200px 0px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(/image/hero/backgrond-image.jpg);
 }
 
 .header-title {
@@ -241,6 +257,20 @@ body {
   line-height: 1.714;
   letter-spacing: 0.03em;
 }
+
+.thumb-benefits {
+  height: 120px;
+  background-color: var(--primary-team-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.benefits-icon {
+  width: 70px;
+  height: 70px;
+}
 /* =====about===== */
 
 .section-about {
@@ -293,31 +323,84 @@ body {
   margin-bottom: 50px;
 }
 
-.team-list h3 {
+.developers-information {
+  background-color: var(--primary-white-color);
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.developers-information > p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.188;
+  letter-spacing: 0.03em;
+  margin-bottom: 16px;
+}
+
+.name-developers {
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.188;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 }
-
-.team-list p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.188;
-  letter-spacing: 0.03em;
+.list-socialnetwork {
+  display: flex;
+  justify-content: space-between;
 }
 
-.developers-information {
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 15px;
-  padding-right: 15px;
+.list-item-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
 }
 
-.developers-information h3 {
-  margin-bottom: 10px;
+.socialnetwork-link {
+  fill: var(--primary-icon-color);
+  width: 20px;
+  height: 20px;
+}
+
+.list-item-icon:hover,
+.list-item-icon:focus {
+  background-color: var(--accent-color);
+}
+
+.list-item-icon:hover .socialnetwork-link,
+.list-item-icon:focus .socialnetwork-link {
+  fill: var(--primary-white-color);
+}
+/* =====Постоянные клиенты====== */
+.client-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.list-item-client:not(:last-child) {
+  margin-right: 30px;
+}
+.list-client {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-item-client {
+  display: flex;
+  justify-content: center;
+
+  width: 170px;
+  height: 90px;
+}
+
+.client-icon {
+  fill: var(--primary-icon-color);
 }
 
 /* =====footer===== */
