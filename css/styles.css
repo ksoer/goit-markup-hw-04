@@ -10,6 +10,7 @@
   --secondary-text-color: #212121;
   --accent-color: #2196f3;
   --primary-icon-color: #afb1b8;
+  --background-icon-footer-color: rgba(255, 255, 255, 0.1);
   --primary-footer-head-color: #2f303a;
   --primary-team-color: #f5f4fa;
   --primary-black-color: #000000;
@@ -387,22 +388,61 @@ body {
 }
 .list-client {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .list-item-client {
   display: flex;
+}
+.client-link {
+  display: flex;
   justify-content: center;
-
+  align-items: center;
+  border: 1px solid var(--primary-icon-color);
+  fill: var(--primary-icon-color);
+  border-radius: 4px;
   width: 170px;
   height: 90px;
 }
 
-.client-icon {
-  fill: var(--primary-icon-color);
+.client-link:focus,
+.client-link:hover {
+  border-color: var(--accent-color);
 }
 
+.client-icon:focus,
+.client-link:hover {
+  fill: var(--accent-color);
+}
+
+.logo1 {
+  width: 44px;
+  height: 49px;
+}
+
+.logo2 {
+  width: 40px;
+  height: 52px;
+}
+
+.logo3 {
+  width: 41px;
+  height: 42px;
+}
+
+.logo4 {
+  width: 80px;
+  height: 42px;
+}
+
+.logo5 {
+  width: 59px;
+  height: 47px;
+}
+
+.logo6 {
+  width: 88px;
+  height: 45px;
+}
 /* =====footer===== */
 
 footer {
@@ -426,6 +466,7 @@ footer {
 .address-list-str {
   display: flex;
   flex-direction: column;
+  margin-right: 70px;
 }
 .address-item:not(:last-child) {
   margin-bottom: 9px;
@@ -454,6 +495,54 @@ footer {
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: var(--primary-white-transparent);
+}
+
+.title-footer-social {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1, 14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+  margin-bottom: 20px;
+}
+
+footer .container {
+  display: flex;
+}
+
+.footer-social {
+  margin-top: 12px;
+}
+.socialnetwork-link-footer {
+  fill: var(--primary-white-color);
+  width: 20px;
+  height: 20px;
+}
+
+.footer-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--background-icon-footer-color);
+}
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--accent-color);
+}
+
+.footer-social-link:hover .socialnetwork-link-footer,
+.footer-social-link:focus .socialnetwork-link-footer {
+  fill: var(--primary-white-color);
+}
+
+.footer-social-link:not(:last-child) {
+  margin-right: 10px;
 }
 
 /* =====portfolio-button===== */
