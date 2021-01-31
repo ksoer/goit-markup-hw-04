@@ -183,7 +183,7 @@ body {
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(./image/hero/backgrond-image.jpg);
+    url(../image/hero/backgrond-image.jpg);
 }
 
 .header-title {
