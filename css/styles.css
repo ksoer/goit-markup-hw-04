@@ -173,7 +173,7 @@ body {
 /* =====Hero===== */
 
 .hero {
-  /* background-color: var(--primary-footer-head-color); */
+  background-color: var(--primary-footer-head-color);
   text-align: center;
   padding: 200px 0px;
   margin-left: auto;
@@ -363,6 +363,14 @@ body {
   cursor: pointer;
 }
 
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+}
+
 .socialnetwork-link {
   fill: var(--primary-icon-color);
   width: 20px;
@@ -393,9 +401,6 @@ body {
 
 .list-item-client {
   display: flex;
-}
-.client-link {
-  display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid var(--primary-icon-color);
@@ -404,14 +409,20 @@ body {
   width: 170px;
   height: 90px;
 }
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--primary-icon-color);
+}
 
-.client-link:focus,
-.client-link:hover {
+.list-item-client:focus,
+.list-item-client:hover {
   border-color: var(--accent-color);
 }
 
-.client-icon:focus,
-.client-link:hover {
+.list-item-client:focus > .client-link,
+.list-item-client:hover > .client-link {
   fill: var(--accent-color);
 }
 
@@ -512,11 +523,9 @@ footer {
 
 footer .container {
   display: flex;
+  align-items: baseline;
 }
 
-.footer-social {
-  margin-top: 12px;
-}
 .socialnetwork-link-footer {
   fill: var(--primary-white-color);
   width: 20px;
@@ -596,6 +605,12 @@ footer .container {
 .my-work-item {
   outline: 1px solid #eeeeee;
   margin: 15px;
+}
+
+.my-work-item:focus,
+.my-work-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .my-work-title {
