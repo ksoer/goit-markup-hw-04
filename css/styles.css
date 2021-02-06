@@ -413,6 +413,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
   fill: var(--primary-icon-color);
 }
 
